@@ -9,7 +9,7 @@ function init_connect() {
 			$query="select count(*) as numusers from users";
 			$result=mysql_query($query);
 			$row=mysql_fetch_assoc($result);
-			echo $row["numusers"]."users in the system<br>";
+			echo $row["numusers"]." users in the system<br>";
 	}
 }
 
@@ -19,6 +19,7 @@ function get_login_data($username, $password) {
 	if (mysql_num_rows($result)!=0) {
 									$row=mysql_fetch_assoc($result);
 									return $row;
+									
 	}
 	else {return "notfound";}
 }
