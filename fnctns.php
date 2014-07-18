@@ -13,9 +13,13 @@ function init_connect() {
 	}
 }
 
-
-
-init_connect();
-
+function get_login_data(username, password) {
+	$query="select * from users where name=\"".$username."\" and password=\"".$password."\"";
+	$result=mysql_query($query);
+	if (mysql_num_rows($result)!=0) {
+									$row=mysql_fetch_assoc($result);
+	}
+	else {return "notfound"}
+}
 ?>
 
