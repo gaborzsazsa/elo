@@ -9,7 +9,7 @@ function init_connect() {
 			$query="select count(*) as numusers from users";
 			$result=mysql_query($query);
 			$row=mysql_fetch_assoc($result);
-			echo $row["numusers"];
+			echo $row["numusers"]."users in the system<br>";
 	}
 }
 
