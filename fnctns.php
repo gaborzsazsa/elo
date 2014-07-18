@@ -18,6 +18,7 @@ function get_login_data($username, $password) {
 	$result=mysql_query($query);
 	if (mysql_num_rows($result)!=0) {
 									$row=mysql_fetch_assoc($result);
+									return $row;
 	}
 	else {return "notfound";}
 }
