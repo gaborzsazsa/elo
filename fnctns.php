@@ -21,5 +21,13 @@ function get_login_data($username, $password) {
 	}
 	else {return "notfound";}
 }
+
+function get_vars() {
+	if ($_SERVER["QUERY_STRING"] != null) {
+	parse_str($_SERVER["QUERY_STRING"],$output);
+	}
+	else {$output="fail";}
+	return $output;
+}
 ?>
 
