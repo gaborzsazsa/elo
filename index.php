@@ -1,3 +1,3 @@
 <?php
-include(fnctns.php);
+include("fnctns.php");
 ?>
